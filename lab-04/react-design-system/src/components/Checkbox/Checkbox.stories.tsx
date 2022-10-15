@@ -1,12 +1,19 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Checkbox, CheckboxProps } from './Checkbox';
-import { Text } from './Text';
+import { Text } from '../Text';
+import page from './Checkbox.docs.mdx';
 
 export default {
   title: 'Components/Checkbox',
   component: Checkbox,
-  args: {},
-  argTypes: {},
+  parameters: {
+    docs: { page },
+  },
+  argTypes: {
+    asChild: {
+      table: { disable: true },
+    },
+  },
   decorators: [
     (Story) => {
       return (
